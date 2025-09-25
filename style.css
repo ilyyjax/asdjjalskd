@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', sans-serif;
+  background: linear-gradient(to top, #87ceeb 0%, #e0f7fa 100%);
+  overflow: hidden;
+}
+
+.game-container {
+  text-align: center;
+  padding-top: 20px;
+}
+
+#scoreboard h1 {
+  font-size: 3em;
+  color: #ff5e5e;
+  text-shadow: 2px 2px #ffe066;
+}
+
+#scoreboard p {
+  font-size: 1.5em;
+}
+
+#game-area {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: 20px auto;
+  border: 5px solid #ff5e5e;
+  border-radius: 20px;
+  background: linear-gradient(to top, #a0e7e5, #b4f8c8);
+  overflow: hidden;
+}
+
+#pickle {
+  width: 50px;
+  height: 80px;
+  background: #9bff00;
+  border-radius: 50% / 20%;
+  position: absolute;
+  bottom: 20px;
+  left: 275px;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+  transition: transform 0.1s ease;
+}
+
+/* Clouds */
+.cloud {
+  width: 80px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  animation: cloudMove linear infinite;
+}
+
+@keyframes cloudMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50px); }
+}
+
+/* Birds */
+.bird {
+  width: 30px;
+  height: 30px;
+  background: #ff9900;
+  border-radius: 50%;
+  position: absolute;
+  animation: birdFly 3s linear infinite alternate;
+}
+
+@keyframes birdFly {
+  0% { transform: translateX(0) rotate(0deg); }
+  50% { transform: translateX(50px) rotate(20deg); }
+  100% { transform: translateX(100px) rotate(0deg); }
+}
+
+.instructions {
+  font-size: 1.2em;
+  color: #555;
+  text-shadow: 1px 1px #fff;
+}
